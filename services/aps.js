@@ -77,7 +77,7 @@ service.authRefreshMiddleware = async (req, res, next) =>{
     };
 
     service.getHubs = async(accessToken) =>{
-        const resp = await dataManagementClient.getHubs(null,authenticationClient,accessToken);
+        const resp = await dataManagementClient.getHubs(accessToken);
         return resp.data;
     };
 
